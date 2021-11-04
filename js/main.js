@@ -110,12 +110,12 @@ $(function() {
 
     $('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
     $('.quantity').each(function() {
-        var spinner = $(this),
-            input = spinner.find('input[type="number"]'),
-            btnUp = spinner.find('.quantity-up'),
-            btnDown = spinner.find('.quantity-down'),
-            min = input.attr('min'),
-            max = input.attr('max');
+        let spinner = $(this);
+        let input = spinner.find('input');
+        let btnUp = spinner.find('.quantity-up');
+        let btnDown = spinner.find('.quantity-down');
+        let min = input.attr('min');
+        let max = input.attr('max');
 
         btnUp.click(function() {
             var oldValue = parseFloat(input.val());
@@ -149,7 +149,7 @@ $(function() {
 
     $('.surfboard-box_circle').on('click', function() {
         $(this).toggleClass('active')
-    })
+    });
     $('.menu-btn').on('click', function() {
         $('.menu').toggleClass('active')
     });
